@@ -1,12 +1,5 @@
-# .______       _______ .___  ___.      ___       __  .__   __.      ______     ___       __      .___  ___.
-# |   _  \     |   ____||   \/   |     /   \     |  | |  \ |  |     /      |   /   \     |  |     |   \/   |
-# |  |_)  |    |  |__   |  \  /  |    /  ^  \    |  | |   \|  |    |  ,----'  /  ^  \    |  |     |  \  /  |
-# |      /     |   __|  |  |\/|  |   /  /_\  \   |  | |  . `  |    |  |      /  /_\  \   |  |     |  |\/|  |
-# |  |\  \----.|  |____ |  |  |  |  /  _____  \  |  | |  |\   |    |  `----./  _____  \  |  `----.|  |  |  |  __
-# | _| `._____||_______||__|  |__| /__/     \__\ |__| |__| \__|     \______/__/     \__\ |_______||__|  |__| (__)
 require 'spec_helper'
 require_relative '../quiz'
-
 # The first question's tests are written.
 # run rspec quiz_spec.rb
 describe "#sleep_in?" do
@@ -26,27 +19,44 @@ describe "#sleep_in?" do
   end
 end
 
-# Write the next tests yourself!
-# See quiz.rb for more details
+describe "del_del" do
+  it "deletes the string 'del' from any string" do
+     deletion_1 = del_del("abdelcd")
+     expect(deletion_1).to eq("abcd")
+  end
+end
 
-# Question 2: a method called del_del
-  # Example Usage:
-  # del_del("abdelcd") => "abcd"
-  # del_del("xyz") => "xyz"
+describe "missing_char" do
+  it "removes characters at given index of a string" do
+    deletion_1 = missing_char("kitten",1)
+    expect(deletion_1).to eq("ktten")
+  end
+end
 
-# Question 3: a method called missing_char
-  # Example Usage:
-  # missing_char("kitten", 1) => "ktten"
-  # missing_char(347, 1) => RuntimeError: Please enter a string!
-  # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+describe "near_hundred" do
+  it "returns true if number is within 10 numbers from 100" do
+    deletion_1 = near_hundred(91)
+    expect(deletion_1).to be(true)
+  end
+end
 
-# Question 4: a method called near_hundred
-  # Example Usage:
-  # near_hundred(93) => true
-  # near_hundred(52) => false
-  # near_hundred('two') => RuntimeError: Please enter a number!
+describe "back_around" do
+  it "takes the last character in a string and places it at the beginning of the string" do
+    back_around_1 = "Fusce".back_around
+    expect(back_around_1).to eq("eFusce")
+  end
+end
 
-# Question 5: a method called back_around
-  # Example Usage:
-  # "cat".back_around => "tca"
-  # "hello".back_around => "ohell"
+
+
+
+
+
+
+
+
+
+
+
+
+
